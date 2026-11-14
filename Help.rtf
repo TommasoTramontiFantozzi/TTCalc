@@ -1,0 +1,192 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1040{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl276\slmult1\qc\cf1\lang16\b\f0\fs22 Calculator\b0\par
+\pard\sl276\slmult1 -General\par
+\pard\li142\sl276\slmult1 Basically this software is a textual calculator. Its main feature is to immediatly update calc results when some data o formula changes, similarly to a spreadsheet. Differently from a spreadsheet, insetad of cells you have variables.\par
+For example:\par
+\pard\fi142\li142\sl276\slmult1 a:5\par
+b:8\par
+a+b=\b 13\b0\par
+\pard\li142\sl276\slmult1\tx142 If you edit the first row and you put "a:3" and you press "Enter", immediatly the third row becomes "a+b=\b 11\b0 ".\par
+The program puts the result after the equal symbol of a formula. So writing "5+5=" and pressing enter, generates "5+5=10".\par
+\pard\sl276\slmult1\tx142 -Comments\par
+\pard\li142\sl276\slmult1\tx142 Using symbol # allows you to insert comments.\par
+Example:\par
+\pard\fi-142\li284\sl276\slmult1\tx142\tab #Here I am going to calc area of rectangle\par
+\tab base:45\par
+\tab height:28 \par
+\tab area:base*height=1260 #My result!\par
+\pard\sl276\slmult1\tx142 -Constants\par
+\pard\li142\sl276\slmult1\tx142 There are some constants supported and you my use them in your formulas: 5^2*pi=\b 78.53...\par
+\b0 --nepero\par
+\pard\fi142\li142\sl276\slmult1\tx142 To this constant is assigned the value: 2.71828182845904523\par
+\pard\li142\sl276\slmult1\tx142 --pi\par
+\pard\fi142\li142\sl276\slmult1\tx142 To this constant is assigned the value: 3.14159265358979323846\par
+\pard\li142\sl276\slmult1\tx142 --avogadro\par
+\pard\fi142\li142\sl276\slmult1\tx142 To this constant is assigned the value: 6.022E23\par
+\pard\sl276\slmult1 -Variables\par
+\pard\li142\sl276\slmult1 This calculator supports variables. Any variable must start with an alphabetic character and may contain numbers. You can assign a value to a variable using this syntax:\par
+\pard\fi142\li142\sl276\slmult1 "variable:value" or "variable:formula"\par
+\pard\li142\sl276\slmult1 For example:\par
+\pard\fi142\li142\sl276\slmult1 airPressure:9+3\par
+\pard\li142\sl276\slmult1\tx284 When a value is assigned to a variable, it may be used inside any formulas.\par
+For example:\par
+\pard\fi142\li142\sl276\slmult1\tx284 airPressure:9+3=\b 12\b0\par
+2*3+airPressure+5=\b 23\b0\par
+\pard\sl276\slmult1 -Arrays\par
+\pard\li142\sl276\slmult1\tx284 It is allowed to assign an array of data to a variable, following this syntax:\par
+\pard\fi142\li142\sl276\slmult1\tx284 "variable:data1,data2,data3"\par
+\pard\fi-142\li284\sl276\slmult1\tx284 You may use arrays with functions oriented to them like sum, count, max, min etc. Accessing to a single data in array is possible using square brackets: "variable[index]=". The first element of an array has index 1.\par
+\pard\li142\sl276\slmult1\tx284 For example:\par
+\pard\fi142\li142\sl276\slmult1\tx284 a:4,8,7,2\b\par
+\b0 a[2]=\b 8\par
+\b0 a[count(a)]=\b 2\par
+\b0 a[count(a)]*2=4\b\par
+\b0 sum(a)=\b 21\par
+\b0 count(a)=4\par
+max(a)=\b 8\b0\par
+\pard\sl276\slmult1 -Math\par
+\pard\li142\sl276\slmult1 --abs(X)\tab Absolute value\par
+\pard\fi142\li142\sl276\slmult1 Returns absolute value of X.\par
+Example: abs(-4)=\b 4\b0\par
+\pard\li142\sl276\slmult1 --sqrt(X)\tab Square root\par
+\pard\fi142\li142\sl276\slmult1 Returns square root of X.\par
+Example: sqrt(9)=\b 3\par
+\pard\li142\sl276\slmult1\b0 --mod(X,Y)\tab Modulus\par
+\pard\fi142\li142\sl276\slmult1 Returns the remainder of a division X/Y.\par
+Example: mod(10,3)=\b 1\b0\par
+\pard\li142\sl276\slmult1 --pow(X,Y)\tab Power elevation\par
+\pard\fi142\li142\sl276\slmult1 Returns the value of X elevated to Y.\par
+Example: pow(8,2)=\b 64\b0\par
+\pard\li142\sl276\slmult1 --log(X)\tab Logaritm\par
+\pard\fi142\li142\sl276\slmult1 Returns logarithm to the base 10 of \par
+Example: log(100)=\b 2\b0\par
+\pard\li142\sl276\slmult1 --ln(X)\tab Logaritm\par
+\pard\fi142\li142\sl276\slmult1 Returns the natural logarithm of X.\par
+Example: ln(2.71828)=\b 0.999\b0 ...\par
+\pard\sl276\slmult1 -Trigonometric\par
+\pard\li142\sl276\slmult1 --cosD(X)\tab Cosine degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the cosine of X expressed in degrees.\par
+Example: cosD(90)=\b 0\b0\par
+\pard\li142\sl276\slmult1 --sinD(X)\tab Sine degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the sine of X expressed in degrees.\par
+Example: sinD(90)=\b 1\b0\par
+\pard\li142\sl276\slmult1 --tanD(X)\tab Tangent degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the tangent of X expressed in degrees.\par
+Example: tanD(45)=\b 1\b0\par
+\pard\li142\sl276\slmult1 --cosR(X)\tab Cosine radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the cosine of X expressed in radiants.\par
+Example: cosR(3.14159)=\b -0.9999\b0 ...\par
+\pard\li142\sl276\slmult1 --sinR(X)\tab Sine radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the sine of X expressed in radiants.\par
+Example: sinR(1.57079)=\b 0.9999\b0 ...\par
+\pard\li142\sl276\slmult1 --tanR(X)\tab Tangent radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the tangent of X expressed in radiants.\par
+\pard\fi142\li142\sl276\slmult1\tx284 Example: tanR(3.14159/4)=\b 0.999\b0 ...\par
+\pard\li142\sl276\slmult1 --arcCosD(X)\tab Arc cosine degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc cosine of X expressed in degrees.\par
+Example: arcCosD(0)=\b 90\b0\par
+\pard\li142\sl276\slmult1 --arcSinD(X)\tab Arc sine degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc sine of X expressed in degrees.\par
+Example: arcSinD(1)=\b 90\b0\par
+\pard\li142\sl276\slmult1 --arcTanD(X)\tab Arc tangent degrees\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc tangent of X expressed in degrees.\par
+Example: arcTanD(1)=\b 45\b0\par
+\pard\li142\sl276\slmult1 --arcCosR(X)\tab Arc cosine radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc cosine of X expressed in radiants.\par
+Example: arcCosR(0)=\b 1.5707\b0 ...\par
+\pard\li142\sl276\slmult1 --arcSinR(X)\tab Arc sine radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc sine of X expressed in radiants.\par
+Example: arcSinR(1)=\b 1.5707\b0 ...\par
+\pard\li142\sl276\slmult1 --arcTanR(X)\tab Arc tangent radiants\par
+\pard\fi142\li142\sl276\slmult1 Returns the arc tangent of X expressed in radiants.\par
+Example: arcTanR(1)=\b 0.7853\b0 ...\par
+\pard\sl276\slmult1 -Programmer\par
+\pard\li142\sl276\slmult1 --b\par
+\pard\fi-142\li426\sl276\slmult1 You may insert binary numbers using "b" character as prefix. For example if you write "b101=" and you press enter you obtain "b101=5". You may also mix binary numbers with decimal numbers. For example "b101+6=" returns 11.\par
+If you want the result as binary, instead of equal symbol you must use "=b".\par
+Example: b111+b10+4=\b 13\b0\par
+Example: 9+2*6+4=b\b 11001\par
+\b0 Example:  9+2*6-b101+4=\b 20\b0\par
+Example:  9+2*6-b101+4=b\b 10100\b0\par
+Example: 9+2*6-b101+0xA0+4=\b 180\par
+\pard\li142\sl276\slmult1\b0 --0x\par
+\pard\fi-142\li426\sl276\slmult1 You may insert hexadecimal numbers using "0x" characters as prefix. For example if you write "0xA5=" and you press enter you obtain "0xA5=165". You may also mix hexadecimal numbers with decimal numbers. For example "0xA5+6=" returns 171.\par
+If you want the result as hexadecimal, instead of equal symbol you must use "=0x".\par
+Example: 0xA5+6=\b 171\par
+\b0 Example: 0xA5+6-b111\b =164\par
+\b0 Example: 0xA5+6-b111+103=0x\b 10B\b0\par
+Example: 0xA5+6-b111+103=\b 267\par
+\pard\li142\sl276\slmult1\b0 --fp32(byte0,byte1,byte2,byte3)\par
+\pard\fi-142\li426\sl276\slmult1 You may insert a number using IEEE754 standard (32bit version). fp32 function accepts a sequence of four bytes starting from sign/exponent side. If you want the result as floating point 32bit, instead of equal symbol you must use "=fp32".\par
+Example: 8+fp32(0x42,0x86,0x00,0x00)-0x0A=\b fp32(0x42,0x82,0x00,0x00)\par
+\b0 Example: 2*fp32(0x42,0x86,0x00,0x00)-0x0A*2-fp32(0x40,0x76,0x66,0x66)=\b 110.150000095\b0\par
+Example: 828.5=\b fp32(0x44,0x4F,0x20,0x00)\par
+\pard\li142\sl276\slmult1\b0 --fp64(byte0,byte1,byte2,byte3,byte4,byte5,byte6,byte7)\par
+\pard\fi-142\li426\sl276\slmult1 You may insert a number using IEEE754 standard  (64bit version). fp64 function accepts a sequence of eight bytes starting from sign/exponent side. If you want the result as floating point 64bit, instead of equal symbol you must use "=fp64".\par
+Example: 8+fp64(0x40,0x42,0x40,0x00,0x00,0x00,0x00,0x00)-0x0A=\b 34.5\par
+\b0 Example: fp32(0x42,0x86,0x00,0x00)+fp64(0x40,0x42,0x40,0x00,0x00,0x00,0x00,0x00)-0x0A=\b 93.5\b0\par
+Example: 828.5=\b fp64(0x40,0x89,0xE4,0x00,0x00,0x00,0x00,0x00)\b0\par
+\pard\sl276\slmult1 -Data series\par
+\pard\li142\sl276\slmult1 All istructions in this category are applicable to arrays.\par
+--max(array)\par
+\pard\li284\sl276\slmult1 Returns the biggest value contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+max(a)=\b 43\b0\par
+\pard\li284\sl276\slmult1 Example: max(8,2,9,1)=\b 9\par
+\pard\li142\sl276\slmult1\b0 --min(array)\par
+\pard\li284\sl276\slmult1 Returns the lowest value contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+min(a)=\b 1\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: min(8,2,9,5)=\b 2\par
+\pard\li142\sl276\slmult1\b0 --sum(array)\par
+\pard\li284\sl276\slmult1 Returns the sum of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+sum(a)=\b 59\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: sum(8,2,9,1)=\b 20\par
+\pard\li142\sl276\slmult1\b0 --count(array)\par
+\pard\li284\sl276\slmult1 Returns the number of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+count(a)=\b 6\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: count(8,2,9,1)=\b 4\par
+\pard\li142\sl276\slmult1\b0 --avg(array)\par
+\pard\li284\sl276\slmult1 Returns the average of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+avg(a)=\b 9.833...\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: avg(8,2,9,1)=\b 5\par
+\pard\li142\sl276\slmult1\b0 --pVariance(array)\par
+\pard\li284\sl276\slmult1 Returns the variance applied to a population of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+pVariance(a)=\b 225.13888...\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: pVariance(8,2,9,1)=\b 12.5\par
+\pard\li142\sl276\slmult1\b0 --sVariance(array)\par
+\pard\li284\sl276\slmult1 Returns the variance applied to a sample of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+sVariance(a)=\b 270.166...\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: sVariance(8,2,9,1)=\b 16.666...\par
+\pard\li142\sl276\slmult1\b0 --pDevStd(array)\par
+\pard\li284\sl276\slmult1 Returns the standard deviation applied to a population of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+pDevStd(a)=\b 15.004...\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: pDevStd(8,2,9,1)=\b 3.535...\par
+\pard\li142\sl276\slmult1\b0 --sDevStd(array)\par
+\pard\li284\sl276\slmult1 Returns the standard deviation applied to a sample of values contained in an array.\par
+\pard\li142\sl276\slmult1\tx284\tab Example:\par
+\pard\fi284\li142\sl276\slmult1\tx284\tx426 a:8,2,3,1,43,2\par
+sDevStd(a)=\b 16.436...\b0\par
+\pard\fi142\li142\sl276\slmult1\tx284\tx426 Example: sDevStd(8,2,9,1)=\b 4.082...\par
+\par
+\par
+\b0\par
+\pard\li284\sl276\slmult1\par
+\pard\fi142\li142\sl276\slmult1\cf0\par
+}
+ 
